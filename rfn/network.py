@@ -37,9 +37,10 @@ class RFN(HybridSequential):
                 N_node_dual, N_edge_dual, N_shared_node_dual, node_mask_dual)
 
         return self._output(X_V, X_E, X_B)
-
     
-      def hybrid_forward_output_all(self, F, X_V, X_E, X_B,
+    
+    
+    def hybrid_forward_output_all(self, F, X_V, X_E, X_B,
                        N_node_primal, N_edge_primal, node_mask_primal,
                        N_node_dual, N_edge_dual, N_shared_node_dual,
                        node_mask_dual):
@@ -50,3 +51,4 @@ class RFN(HybridSequential):
                 N_node_dual, N_edge_dual, N_shared_node_dual, node_mask_dual)
 
         return X_V, X_E, X_B
+      
