@@ -56,11 +56,13 @@ class RFN(HybridSequential):
                        N_node_primal, N_edge_primal, node_mask_primal,
                        N_node_dual, N_edge_dual, N_shared_node_dual,
                        node_mask_dual):
-       
-        X_V, X_E, X_B = rfn_layer(
-            X_V, X_E, X_B,
-            N_node_primal, N_edge_primal, node_mask_primal,
-            N_node_dual, N_edge_dual, N_shared_node_dual, node_mask_dual)
+       for rfn_layer in self._children.values():
+            X_V, X_E, X_B = rfn_layer(
+                X_V, X_E, X_B,
+                N_node_primal, N_edge_primal, node_mask_primal,
+                N_node_dual, N_edge_dual, N_shared_node_dual, node_mask_dual)
+            
+            break
 
         return X_V, X_E, X_B
       
