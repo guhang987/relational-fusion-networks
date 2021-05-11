@@ -58,7 +58,7 @@ class RFN(HybridSequential):
         leng = len(self._children.values())
         for index,rfn_layer in enumerate(self._children.values()):
             X_V, X_E, X_B = rfn_layer(
-                if(index == leng - 1):
+                if index == leng - 1:
                     break
                 X_V, X_E, X_B,
                 N_node_primal, N_edge_primal, node_mask_primal,
