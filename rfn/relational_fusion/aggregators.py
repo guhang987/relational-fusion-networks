@@ -42,8 +42,8 @@ class AttentionalAggregator(RelationalAggregator):
         attention_weight = self.softmax(coefficient, M)
 #         print(X,M)
 #         print(coefficient,M)# 8
-#         print("==============")
-#         print(attention_weight)
+        print("==============")
+        print(attention_weight)
         return F.sum(attention_weight*Z, axis=1)
 
     def get_args(self, X, Z, M, *args):
