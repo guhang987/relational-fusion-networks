@@ -1,5 +1,5 @@
 from mxnet.gluon.nn import HybridSequential
-# from d2l import mxnet as d2l
+from d2l import mxnet as d2l
 
 class RFN(HybridSequential):
     def __init__(self,
